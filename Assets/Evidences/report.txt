@@ -1,0 +1,23 @@
+BÁO CÁO THỰC HÀNH: TÌM HIỂU VÀ SỬ DỤNG PREFABS TRONG UNITY
+
+Họ và tên: Đoàn Hoàng Quân
+Mã sinh viên: BCS230070
+Lớp: 23CS2
+Môn học: Lập trình game
+
+1. MỤC TIÊU
+Báo cáo tóm tắt quá trình tìm hiểu và ứng dụng công cụ Prefab trong Unity để xây dựng hệ thống sinh sản quái vật (Enemy Spawner) tự động.
+
+2. TỔNG QUAN VỀ PREFAB
+Prefab trong Unity là một loại tài nguyên (Asset) đóng vai trò như một bản mẫu (template). Nó cho phép lưu trữ một GameObject cùng với toàn bộ các thành phần (Components), thuộc tính và đối tượng con của nó. Việc sử dụng Prefab giúp tái sử dụng đối tượng nhiều lần trong các Scene khác nhau mà không cần thiết lập lại từ đầu, đồng thời đảm bảo tính đồng bộ cao.
+
+3. QUÁ TRÌNH ÁP DỤNG PREFAB VÀO DỰ ÁN
+Trong bài thực hành, em đã áp dụng các tính năng của Prefab theo quy trình sau:
+- Creating & Instancing: Khởi tạo đối tượng EnemyBase với đầy đủ Sprite và Collider, lưu thành Prefab và tạo ra nhiều bản sao (Instance) trong Scene.
+- Prefab Update: Chỉnh sửa thuộc tính (màu sắc, kích thước) trên Prefab gốc để kiểm chứng khả năng tự động cập nhật đồng loạt lên tất cả các bản sao đang tồn tại.
+- Nested Prefabs: Xây dựng cấu trúc Prefab lồng nhau bằng cách tạo vũ khí (Gun) và gắn vào nhân vật (Player), giúp quản lý phân cấp đối tượng hiệu quả.
+- Prefab Variants: Kế thừa từ EnemyBase để tạo ra các biến thể EnemyFast (tốc độ cao, màu vàng) và EnemyStrong (kích thước lớn, màu tối). Việc này giúp đa dạng hóa kẻ địch nhưng vẫn giữ được các thuộc tính cốt lõi từ bản gốc.
+- Runtime Instantiation: Sử dụng C# Script với hàm Instantiate() và InvokeRepeating() để tự động hóa quá trình sinh quái vật ngẫu nhiên theo thời gian, hoàn thiện Mini Project.
+
+4. KẾT LUẬN
+Hệ thống Prefab là công cụ không thể thiếu để tối ưu hóa hiệu suất làm việc và quản lý bộ nhớ trong Unity. Nó đặc biệt hữu ích cho các dự án game có quy mô lớn, giúp việc mở rộng, bảo trì và chỉnh sửa logic game trở nên nhanh chóng và đồng nhất.
